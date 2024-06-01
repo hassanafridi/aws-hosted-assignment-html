@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amna Sheikh - AI & Machine Learning Expert</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        .hero { text-align: center; padding: 50px 20px; background-color: #009688; color: white; }
+        .hero h1 { margin: 0; }
+        .expertise { display: flex; justify-content: space-around; padding: 20px; flex-wrap: wrap; }
+        .expertise div { flex-basis: 30%; background-color: white; padding: 15px; margin: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .special-thanks {
+    background-color: #e8f5e9; /* Light green background for the section */
+    padding: 20px;
+    text-align: center;
+}
+.special-thanks h2 {
+    color: #009688; /* Theme color for headings */
+}
+.special-thanks p {
+    color: #666; /* Darker text for the paragraph */
+}
+
+        .contact { text-align: center; padding: 20px; }
+        footer { background-color: #333; color: white; text-align: center; padding: 10px; }
+        a { color: #009688; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        /* Scroll animations */
+        .hidden { opacity: 0; transform: translateY(100px); transition: all 0.5s ease-in-out; }
+        .visible { opacity: 1; transform: translateY(0); }
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .expertise div { flex-basis: 45%; }
+        }
+        @media (max-width: 480px) {
+            .expertise div { flex-basis: 90%; }
+            .hero { padding: 20px; }
+            .contact { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>👋 Hey There! This is Amna Sheikh</h1>
+        <p>👀 I’m working in domains relevant to Artificial Intelligence & Machine Learning...</p>
+    </div>
+    <div class="container">
+        <div class="expertise">
+            <!-- Each expertise div will animate on scroll -->
+            <div class="hidden">
+                <h2>AI & MACHINE LEARNING</h2>
+                <p>Python, TensorFlow, PyTorch, Scikit-Learn, Keras, NLP, Computer Vision</p>
+            </div>
+            <div class="hidden">
+                <h2>DEEP LEARNING</h2>
+                <p>Neural Networks, DNNs, CNNs, RNNs</p>
+            </div>
+            <div class="hidden">
+                <h2>🌱 Currently Studying</h2>
+                <p>Master's of Science in Artificial Intelligence</p>
+            </div>
+        </div>
+        <div class="contact hidden">
+            <h2>Skills/Expertise In Above Mentioned Domains:</h2>
+            <p>Python, TensorFlow, Statistics</p>
+            <h2>My Professional Sites to Contact / Connect / Follow me 📫 :</h2>
+            <p>To see Further Projects And Career Stats Information Visit My Professional Sites</p>
+            <a href="https://github.com/amna-shiekh" target="_blank">GitHub</a> | <a href="#" target="_blank">LinkedIn</a> | <a href="#" target="_blank">Twitter</a>
+        </div>
+    </div>
+<!-- Special Thanks Section -->
+<section class="special-thanks">
+    <div class="container">
+        <h2>Special Thanks</h2>
+        <p>I would like to extend my heartfelt gratitude to <strong>Hassan Afridi</strong> for his generous support with hosting this website. 
+            His willingness to share his Amazon account and his expertise in resolving server-side issues were invaluable to this project. 
+            Thank you, Hassan, for your collaboration and assistance.</p>
+        <!-- Hassan Afridi's Professional Links -->
+        <p>Connect with Hassan on <a href="https://linkedin.com/in/hassanafridi" target="_blank">LinkedIn</a> and follow his work on 
+            <a href="https://github.com/hassanafridi" target="_blank">GitHub</a>.</p>
+    </div>
+</section>
+
+    <footer class="">
+        <p>© 2024 Amna Sheikh. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to add 'visible' class to elements in the viewport
+        function addClassOnScroll() {
+            const hiddenElements = document.querySelectorAll('.hidden');
+            hiddenElements.forEach(function(el) {
+                if (isInViewport(el)) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        // Listen for scroll events
+        window.addEventListener('scroll', addClassOnScroll);
+    </script>
+</body>
+</html>
